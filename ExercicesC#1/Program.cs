@@ -6,6 +6,10 @@
         {
             Console.WriteLine(fibonacciGerar(5));
             Console.WriteLine(gerarFatorial(5));
+
+           
+            int resultado = CountEvens([2, 4, 5, 8]);
+            Console.WriteLine($"Quantidade de números pares: {resultado}");
         }
 
         public static List<int> fibonacciGerar(int n)
@@ -51,6 +55,22 @@
             }
 
             return resultado;
+        }
+
+
+        public static int CountEvens(int[] nums)
+        {
+            int contador = 0;
+
+            foreach (int num in nums)
+            {
+                if (num % 2 == 0)
+                {
+                    contador++;
+                }
+            }
+
+            return contador;
         }
     }
 }
