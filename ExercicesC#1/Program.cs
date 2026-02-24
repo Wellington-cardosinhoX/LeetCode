@@ -1,17 +1,32 @@
-﻿namespace ExercicesC_1
+﻿using System.Net.Http.Headers;
+
+namespace ExercicesC_1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(fibonacciGerar(5));
-            Console.WriteLine(gerarFatorial(5));
+            //Console.WriteLine(fibonacciGerar(5));
+            //Console.WriteLine(gerarFatorial(5));
 
-           
-            int resultado = CountEvens([2, 4, 5, 8]);
-            Console.WriteLine($"Quantidade de números pares: {resultado}");
 
-            Console.WriteLine(FindMax([1, 67, 33, 55]));
+            //int resultado = CountEvens([2, 4, 5, 8]);
+            //Console.WriteLine($"Quantidade de números pares: {resultado}");
+
+            //Console.WriteLine(FindMax([1, 67, 33, 55]));
+
+
+
+            Console.WriteLine(RepeatLetter(['a', 'a', 'b', 'c', 'c', 'd']));
+
+
+            // Exemplo de tupla
+
+            (string nome, int idade, decimal salario) pessoa = ("Wellington", 20, 2546);
+
+            Console.WriteLine(pessoa.nome);
+            Console.WriteLine(pessoa.idade);
+            Console.WriteLine(pessoa.salario);
         }
 
         public static List<int> fibonacciGerar(int n)
@@ -40,7 +55,6 @@
 
             return lista;
         }
-
 
         public static int gerarFatorial(int n)
         {
@@ -106,6 +120,35 @@
             }
 
             return false;
+        }
+
+
+        public static char RepeatLetter(char[] text)
+        {
+            Dictionary<char, int> contador = new Dictionary<char, int>();
+
+            // Contar quantas vezes cada caractere aparece
+            foreach (char c in text)
+            {
+                if (contador.ContainsKey(c))
+                {
+                    contador[c]++;
+                }
+                else
+                {
+                    contador[c] = 1;
+                }
+            }
+
+            foreach (char c in text)
+            {
+                if (contador[c] == 1)
+                {
+                    return c;
+                }
+            }
+
+            return '\0';
         }
     }
 }
