@@ -91,9 +91,21 @@
             return maior;
         }
 
-        public static int DuplicateVerify(int[] nums)
+        public static bool DuplicateVerify(int[] nums)
         {
+            HashSet<int> resultado = new HashSet<int>();
 
+            foreach (int numero in nums)
+            {
+                if (resultado.Contains(numero))
+                {
+                    return true;
+                }
+
+                resultado.Add(numero);
+            }
+
+            return false;
         }
     }
 }
