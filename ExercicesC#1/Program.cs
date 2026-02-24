@@ -10,6 +10,8 @@
            
             int resultado = CountEvens([2, 4, 5, 8]);
             Console.WriteLine($"Quantidade de números pares: {resultado}");
+
+            Console.WriteLine(FindMax([1, 67, 33, 55]));
         }
 
         public static List<int> fibonacciGerar(int n)
@@ -71,6 +73,27 @@
             }
 
             return contador;
+        }
+
+
+        public static int FindMax(int[] numeros)
+        {
+            int maior = numeros[0];
+
+            foreach (int numero in numeros)
+            {
+                if (numero > maior)
+                {
+                    maior = numero;
+                }
+            }
+
+            return maior;
+        }
+
+        public static int DuplicateVerify(int[] nums)
+        {
+
         }
     }
 }

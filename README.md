@@ -1,0 +1,1 @@
+# Trata-se de exercícios de leetcode para reforçar lógica da programação e domínio da linguagem

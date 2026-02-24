@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/README/">
+    <File Path="README.md" />
+  </Folder>
   <Project Path="ExercicesC#1/ExercicesC#1.csproj" />
 </Solution>
