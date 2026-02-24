@@ -20,13 +20,7 @@ namespace ExercicesC_1
             Console.WriteLine(RepeatLetter(['a', 'a', 'b', 'c', 'c', 'd']));
 
 
-            // Exemplo de tupla
 
-            (string nome, int idade, decimal salario) pessoa = ("Wellington", 20, 2546);
-
-            Console.WriteLine(pessoa.nome);
-            Console.WriteLine(pessoa.idade);
-            Console.WriteLine(pessoa.salario);
         }
 
         public static List<int> fibonacciGerar(int n)
